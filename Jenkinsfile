@@ -8,7 +8,7 @@ pipeline {
     environment {
         SNYK = tool name: 'Snyk-Installation'
         SNYK_API_TOKEN = credentials('Snyk-API-Token')
-        GITHUB_URL = scm.getUserRemoteConfigs()[0].getUrl().replaceAll(/\.git$/, '')
+        GITHUB_URL = 'https://github.com/SHAODOO/dvna'
     }
 
     parameters {
