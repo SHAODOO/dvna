@@ -9,6 +9,7 @@ pipeline {
         SNYK = tool name: 'Snyk-Installation'
         SNYK_API_TOKEN = credentials('Snyk-API-Token')
         GITHUB_URL = 'https://github.com/SHAODOO/dvna'
+        TEST = scm.getUserRemoteConfigs()[0].getUrl().replaceAll(/\.git$/, '')
     }
 
     parameters {
@@ -20,7 +21,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Build'
+                echo '${TEST}'
             }
         }
 
