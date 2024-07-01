@@ -5,6 +5,7 @@ var session = require('express-session')
 var ejs = require('ejs')
 var morgan = require('morgan')
 const fileUpload = require('express-fileupload');
+var apiKey = "eyhbsvbsjbvjHB@^#@*&879q7uhdnsdvj "
 
 //Initialize Express
 var app = express()
